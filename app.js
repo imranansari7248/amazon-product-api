@@ -41,7 +41,7 @@ app.get('/query', (req, res) => {
 app.get('/api', (req, res) => {
     if (Object.keys(req.query).length == 0) {
         res.json({
-            error: 'api is live',
+            status: 'api is live',
             message: `visit : http://localhost:3000/help for help`
         }) 
         return 
