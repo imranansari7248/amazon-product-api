@@ -187,3 +187,4 @@ Project Link: [https://github.com/imranansari72/amazon-product-api](https://gith
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+[product-screenshot]: images/screenshot.png
