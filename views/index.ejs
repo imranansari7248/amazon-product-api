@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Product API</title>
+</head>
+
+<body>
+    <h1>welcome : </h1>
+    <p>for checking api is live visit : http://localhost:3000/api</p><br><br>
+    <h2>Docs</h2><br><br>
+    <p>base url : http://localhost:3000/</p>
+    <h3 style="text-decoration: underline;">=> '/api' : to fetch the list of products</h3>
+    <p>for fetching details of produst give a query. (query parameter is required)</p>
+    <p><em>http:localhost:3000/api?<b>query</b>=laptop</em></p>
+    <p>you can send some other parameters :</p>
+    <p> > price range : <em>http:localhost:3000/api?<b>query</b>=laptop&<b>price</b>=50000-60000</em> [optional]</p>
+    <p> > or only price : <em>http:localhost:3000/api?<b>query</b>=laptop&<b>price</b>=50000</em> [optional]</p>
+    <p> > brand : <em>http://localhost:3000/api?<b>query</b>=laptop&<b>brand</b>=dell</em> [optional]</p>
+    <h4>for more results just send the page parameter</h4>
+    <p> > page : <em>http://localhost:3000/api?query=laptop&brand=dell&page=2</em> by default = 1 [optional]</p>
+    <h4>result type : </h4>
+    <p>
+        <code>{ status : 'success',</code><br>
+        <code> results : [</code><br>
+        <code>0  : </code><br>
+        <code>imageURL : "https://m.media-amazon.com/images/I/61XJ6xrICAL._AC_UY218_.jpg"</code><br>
+        <code>title : "Lenovo IdeaPad 3 11th Gen Intel Core i5 14\" FHD Thin & Light Laptop (16GB/512 GB SSD/Windows 11/Office 2021/Backlit/Fingerprint Reader/2
+            Yr Warranty/Arctic Grey/1.41Kg), 82H7016KIN "</code><br>
+        <code>url : "https://www.amazon.in/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_aps_sr_pg1_1?ie=UTF8&adId=A09396792A1L9UVWMZCQ3&url=%2FLenovo-IdeaPad-Fingerprint-Warranty-82H7016KIN%2Fdp%2FB09NP5PCVY%2Fref%3Dsr_1_1_sspa%3Fkeywords%3Dlaptop%26qid%3D1644690984%26sr%3D8-1-spons%26psc%3D1&qualifier=1644690984&id=3497138112868967&widgetName=sp_atf"</code><br>
+        <code>price : "60990"</code><br>
+        <code>rating : "4.2 out of 5 stars"</code><br>
+        <code>1 : </code><br>
+        <code>imageURL : "https://m.media-amazon.com/images/I/71iczfK6yGL._AC_UY218_.jpg"</code><br>
+        <code>tiitle : "Lenovo Ideapad Slim 5 Pro AMD Ryzen 7 5800U 14\" (35.56cm) 2.2K IPS Thin & Light Laptop (16GB/512GB SSD/Windows 11/Office
+        2021/Backlit Keyboard/100% sRGB/3Yr Warranty/Storm Grey/1.38Kg), 82L700D0IN "</code><br>
+        <code>url : "https://www.amazon.in/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_aps_sr_pg1_1?ie=UTF8&adId=A00505531QL950KQBU3K3&url=%2FLenovo-Ideapad-Keyboard-Warranty-82L700D0IN%2Fdp%2FB09M41GR4K%2Fref%3Dsr_1_2_sspa%3Fkeywords%3Dlaptop%26qid%3D1644690984%26sr%3D8-2-spons%26psc%3D1&qualifier=1644690984&id=3497138112868967&widgetName=sp_atf"</code><br>
+        <code>price : 73636</code><br>
+        <code>rating : "2.0 out of 5 stars" ... ]</code><br>
+        <code>}</code>
+    </p>
+    <br>
+    <br>
+    <br>
+
+    <h3 style="text-decoration: underline;">'/link : fetch the data of specific item</h3>
+    <p>Accepts the link parameter only (required)</p>
+    <p><em>http://localhost:3000/link?<b>link</b>=https://www.amazon.in/ASUS-VivoBook-i5-1135G7-Graphics-X415EA-EK572WS/dp/B09DX8FZSL/ref=pd_lpo_3?pd_rd_i=B09DX8FZSL&th=1</em></p>
+    <br><br><br>
+    <h3 style="text-decoration: underline;">Uses : </h3>
+    <ul>
+        <li>
+            Make your own amazon product <b>price tracker</b>.
+        </li>
+        <li>search product and use is your app</li>
+    </ul>
+</body>
+
+</html>
