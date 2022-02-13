@@ -104,7 +104,7 @@ app.get('/help' , (req, res) => {
     res.render('index');
 })
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT | 3000, () => {
     console.log('Server started on port 3000');
 })
 
