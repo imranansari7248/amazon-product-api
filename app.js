@@ -20,6 +20,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/query', (req, res) => {
+    res.set('Access-Control-Allow-Origin', '*');
     if (req.query.query) {
         const pythonScript = spawn('python', ['./scrap_by_query_string.py', query], { shell : true});
 
@@ -39,6 +40,7 @@ app.get('/query', (req, res) => {
 
 
 app.get('/api', (req, res) => {
+    res.set('Access-Control-Allow-Origin', '*');
     if (Object.keys(req.query).length == 0) {
         res.json({
             status: 'api is live',
@@ -72,6 +74,7 @@ app.get('/api', (req, res) => {
 })
 
 app.get('/link', (req, res) => {
+    res.set('Access-Control-Allow-Origin', '*');
     console.log(req.query)
     if (Object.keys(req.query).length == 0) {
         res.json({
@@ -104,7 +107,7 @@ app.get('/help' , (req, res) => {
     res.render('index');
 })
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log('Server started on port 3000');
 })
 
